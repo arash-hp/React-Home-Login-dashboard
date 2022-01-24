@@ -6,6 +6,7 @@ import { Navbar } from './Navbar/Navbar';
 import { Header } from './Header/Header';
 import { CourseList } from './CourseList/CourseList';
 import { Pagination } from './Pagination/Pagination';
+import styles from './Profile.module.scss';
 // import App from './Pagination/Pagination';
 // import styles from './Profile.module.scss'
 
@@ -95,10 +96,10 @@ class ProfilePage extends Component {
                         Page | profile
                     </title>
                 </Helmet>
-                <div>
+                <div className={styles.root}>
                     <Navbar onSearch={this.onSearch} />
                     <Header items={categories} onSelect={this.handleCategorySelect} activeItem={selectedCategory} />
-                    {loading && <div >Loading...</div>}
+                    {loading && <div className={styles.loading} ></div>}
                     <CourseList items={items} />
                     <Pagination onChange={this.onPageChange} page={page} pageCount={pageCount} />
                 </div>

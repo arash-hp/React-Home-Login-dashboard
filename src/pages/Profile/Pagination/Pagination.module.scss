@@ -1,0 +1,29 @@
+.root {
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+    button {
+        background: rgb(145, 176, 182);
+        margin: 2px;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        transition: all 0.3s ease-in;
+        &:hover {
+            color: rgb(145, 176, 182);
+            background: #fff;
+            font-weight: bold;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .root {
+        width: 375px !important;
+        margin: auto !important;
+        flex-wrap: wrap !important;
+    }
+}

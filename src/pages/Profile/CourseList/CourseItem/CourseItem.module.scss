@@ -2,24 +2,119 @@
     display: flex;
     align-items: stretch;
     height: 100px;
-    .image * {
-        width: 100px;
-    }
-    .description {
+    width: 60%;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.116);
+    .description_box {
+        display: flex;
         flex: 1;
+        .image * {
+            width: 140px;
+            height: 100px;
+        }
+        .description {
+            flex: 1;
+            // width: 300px;
+            font-size: 12px;
+            padding: 16px;
+            p {
+                color: rgba(52, 92, 185, 0.774);
+                font-weight: bold;
+                &:nth-child(3) {
+                    color: rgba(0, 0, 0, 0.295);
+                }
+            }
+            h3 {
+                padding-top: 6px;
+                padding-bottom: 12px;
+                color: rgba(0, 0, 0, 0.801);
+            }
+        }
     }
-    .teacher {
+    .teachers_box {
+        display: flex;
         flex: 1;
+        .teacher_box {
+            margin: 8px;
+            overflow: hidden;
+            border-radius: 100%;
+            .teacher_img * {
+                width: 80px;
+                height: 100px;
+            }
+        }
+        .teacher {
+            flex: 1;
+            font-size: 12px;
+            padding: 16px;
+            h3 {
+                color: rgba(0, 0, 0, 0.81);
+                padding-bottom: 8px;
+            }
+            p {
+                color: rgba(0, 0, 0, 0.466);
+            }
+        }
     }
+
     .price {
         width: 100px;
-        border-left: 1px dotted rgba(0, 0, 0, 0.562);
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.81);
+        border-left: 1px dotted rgba(0, 0, 0, 0.362);
         display: flex;
         justify-content: center;
         align-items: center;
         &.free {
-            color: green;
+            color: rgb(62, 128, 204);
             font-weight: 900;
         }
     }
 }
+
+@media only screen and (max-width: 1280px) {
+    .root {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+}
+
+@media only screen and (max-width: 600px) {
+    .root {
+        height: 250px !important;
+        flex-wrap: wrap !important;
+        .description_box {
+            flex: auto;
+            // .description {
+            //     flex: none;
+            // }
+        }
+        .teachers_box {
+            position: relative;
+            flex-direction: row-reverse;
+            .teacher_box {
+                border-radius: 0 !important;
+                .teacher_img * {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 140px;
+                    height: 100px;
+                }
+            }
+        }
+        .price {
+            width: 60px;
+            position: absolute;
+            left: 5px;
+            bottom: 5px;
+            border: none;
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px)
+
+/* Large devices (laptops/desktops, 992px and up) */
