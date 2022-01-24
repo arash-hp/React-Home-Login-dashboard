@@ -1,0 +1,40 @@
+.root {
+    .nav_top {
+        display: flex;
+        justify-content: space-between;
+        background: rgb(245, 245, 245);
+        padding: 16px 60px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+        .nav_left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                i {
+                    font-size: 36px;
+                }
+            }
+            .search {
+                position: relative;
+                i {
+                    position: absolute;
+                    left: 8px;
+                    top: 6px;
+                }
+                input {
+                    width: 300px;
+                    padding: 4px 28px;
+                    //    padding-left: 8px;
+                    border: none;
+                    border-radius: 16px;
+                }
+            }
+        }
+    }
+}
+

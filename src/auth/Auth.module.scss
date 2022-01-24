@@ -1,0 +1,20 @@
+.root {
+    display: flex;
+    width: 800px;
+    *{
+        transition: all .3s ease-in-out;
+    }
+    .main {
+        background: rgb(148, 123, 123);
+        flex: 2 0 0;
+        order: 2;
+    }
+    .side {
+        background: brown;
+        flex: 1 0 0;
+        order: 3;
+        &.active {
+            order: 1;
+        }
+    }
+}

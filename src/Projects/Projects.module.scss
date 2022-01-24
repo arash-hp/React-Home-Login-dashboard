@@ -1,0 +1,120 @@
+.root {
+    background: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: -20px 0 50px;
+    h1 {
+        font-weight: bold;
+        margin: 0;
+        color: #3aaf9f;
+    }
+    p {
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        margin: 20px 0 30px;
+    }
+    span {
+        font-size: 12px;
+    }
+    a {
+        color: #333;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 15px 0;
+    }
+    button {
+        border-radius: 20px;
+        border: 1px solid #3aaf9f;
+        background: #3aaf9f;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 45px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 80ms ease-in;
+        &:hover {
+            transform: scale(0.95);
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        position: relative;
+        overflow: hidden;
+        width: 768px;
+        max-width: 100%;
+        min-height: 480px;
+        & > * {
+            transition: all 0.6s ease-in-out;
+        }
+        .formContainer {
+            position: absolute;
+            top: 0;
+            height: 100%;
+        }
+        .signInContainer {
+            left: 0;
+            // width: 50%;
+            right: 35%;
+            // z-index: 2;
+        }
+        .signUpContainer {
+            left: 65%;
+            right: 0;
+
+            // width: 50%;
+            // z-index: 1;
+            // opacity: 0;
+        }
+        .overlayContainer {
+            position: absolute;
+            top: 0;
+            left: 65%;
+            right: 0;
+            // width: 35%;
+            height: 100%;
+            overflow: hidden;
+            transition: all 0.6s ease-in-out;
+            z-index: 100;
+        }
+        &.rightPanelActive {
+            .signInContainer {
+                // transform: translateX(100%);
+                left: 0%;
+                right: 65%;
+            }
+            .overlayContainer {
+                // transform: translateX(-195%);
+                left: 0;
+                right: 65%;
+            }
+            .signUpContainer {
+                // transform: translateX(100%);
+                // opacity: 1;
+                // z-index: 5;
+                // animation: show 0.6s;
+                right: 0%;
+                left: 35%;
+            }
+            .overlay {
+                // transform: translateX(50%);
+                // .overlayLeft {
+                //     transform: translateX(0);
+                // }
+                // .overlayRight {
+                //     transform: translateX(20%);
+                // }
+            }
+        }
+    }
+}

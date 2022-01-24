@@ -1,0 +1,85 @@
+.root {
+    .nav_top {
+        display: flex;
+        justify-content: space-between;
+        background: rgb(245, 245, 245);
+        padding: 16px 60px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+        .nav_left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                i {
+                    font-size: 36px;
+                }
+            }
+            .search {
+                position: relative;
+                i {
+                    position: absolute;
+                    left: 8px;
+                    top: 6px;
+                }
+                input {
+                    width: 300px;
+                    padding: 4px 28px;
+                    //    padding-left: 8px;
+                    border: none;
+                    border-radius: 16px;
+                }
+            }
+        }
+        .nav_right {
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style-type: none;
+                gap: 32px;
+                li {
+                    cursor: pointer;
+                    padding: 8px 24px;
+                    transition: all .3s ease-out;
+
+                    &:hover{
+                        background-color: rgba(0, 128, 0, 0.425);
+                        border-radius: 24px;
+                    }
+                    &:nth-child(3) {
+                        color: green;
+                        border: 2px solid green;
+                        padding: 8px 24px;
+                        border-radius: 24px;
+                        transition: all .3s ease-out;
+                        &:hover{
+                            background:rgba(0, 128, 0, 0.425) ;
+                            border: 2px solid transparent;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.nav_bottom {
+    padding: 0 60px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        li {
+            cursor: pointer;
+            font-size: 14px;
+        }
+    }
+}

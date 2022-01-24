@@ -1,0 +1,25 @@
+.root {
+    display: flex;
+    align-items: stretch;
+    height: 100px;
+    .image * {
+        width: 100px;
+    }
+    .description {
+        flex: 1;
+    }
+    .teacher {
+        flex: 1;
+    }
+    .price {
+        width: 100px;
+        border-left: 1px dotted rgba(0, 0, 0, 0.562);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.free {
+            color: green;
+            font-weight: 900;
+        }
+    }
+}
